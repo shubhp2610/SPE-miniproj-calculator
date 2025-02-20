@@ -5,7 +5,7 @@ pipeline {
    }
     environment {
         DOCKER_IMAGE_NAME = 'calculator'
-        GITHUB_REPO_URL = 'https://github.com/BThangaraju/calculator.git'
+        GITHUB_REPO_URL = 'https://github.com/shubhp2610/SPE-miniproj-calculator.git'
     }
 
     stages {
@@ -30,9 +30,9 @@ pipeline {
         stage('Push Docker Images') {
             steps {
                 script{
-                    docker.withRegistry('', 'DockerHubCred') {
-                    sh 'docker tag calculator iiitb/calculator:latest'
-                    sh 'docker push iiitb/calculator'
+                    docker.withRegistry('', '476d8d59-73e9-4eb2-82b2-83113de121d1') {
+                    sh 'docker tag calculator shubhpatel2610/calculator:latest'
+                    sh 'docker push shubhpatel2610/calculator'
                     }
                  }
             }
