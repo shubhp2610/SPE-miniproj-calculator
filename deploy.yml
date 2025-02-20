@@ -1,8 +1,8 @@
 ---
 - name: Pull Docker Image from Docker Hub
   hosts: localhost
-  remote_user: raju
-  become: false
+  remote_user: ubuntu
+  become: true
   tasks:
 
     - name: Install Python Docker SDK
